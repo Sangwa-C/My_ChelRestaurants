@@ -16,11 +16,13 @@ import butterknife.ButterKnife;
 public class RestaurantsActivity extends AppCompatActivity {
     @BindView(R.id.locationTextView) TextView mLocationTextView;
     @BindView(R.id.listView) ListView mListView;
+
     private String[] restaurants = new String[] {"Mi Mero Mole", "Mother's Bistro",
             "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
             "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
             "Lardo", "Portland City Grill", "Fat Head's Brewery",
             "Chipotle", "Subway"};
+
     private String[] cuisines = new String[] {"Vegan Food", "Breakfast", "Fishs Dishs",
             "Scandinavian", "Coffee", "English Food", "Burgers", "Fast Food", "Noodle Soups",
             "Mexican", "BBQ", "Cuban", "Bar Food", "Sports Bar", "Breakfast", "Mexican" };
