@@ -4,13 +4,17 @@ package com.example.mychelrestaurants.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
 import java.util.List;
 
+
+@Parcel
 public class Business {
 
     @SerializedName("rating")
     @Expose
-    private double rating;
+    private Double rating;
     @SerializedName("price")
     @Expose
     private String price;
@@ -56,13 +60,11 @@ public class Business {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Business() {
     }
 
     /**
-     * 
      * @param transactions
      * @param phone
      * @param location
@@ -79,7 +81,7 @@ public class Business {
      * @param isClosed
      * @param coordinates
      */
-    public Business(double rating, String price, String phone, String id, String alias, Boolean isClosed, List<Category> categories, Integer reviewCount, String name, String url, Coordinates coordinates, String imageUrl, Location location, Double distance, List<String> transactions) {
+    public Business(Double rating, String price, String phone, String id, String alias, Boolean isClosed, List<Category> categories, Integer reviewCount, String name, String url, Coordinates coordinates, String imageUrl, Location location, Double distance, List<String> transactions) {
         super();
         this.rating = rating;
         this.price = price;
@@ -98,11 +100,11 @@ public class Business {
         this.transactions = transactions;
     }
 
-    public double getRating() {
+    public Double getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(Double rating) {
         this.rating = rating;
     }
 
@@ -217,5 +219,4 @@ public class Business {
     public void setTransactions(List<String> transactions) {
         this.transactions = transactions;
     }
-
 }

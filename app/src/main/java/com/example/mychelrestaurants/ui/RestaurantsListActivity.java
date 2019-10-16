@@ -25,8 +25,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RestaurantsActivity extends AppCompatActivity {
-    private static final String TAG = RestaurantsActivity.class.getSimpleName();
+public class RestaurantsListActivity extends AppCompatActivity {
+    private static final String TAG = RestaurantsListActivity.class.getSimpleName();
 
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     @BindView(R.id.errorTextView) TextView mErrorTextView;
@@ -56,10 +56,10 @@ public class RestaurantsActivity extends AppCompatActivity {
                 
                 if (response.isSuccessful()) {
                     restaurants = response.body().getBusinesses();
-                    mAdapter = new RestaurantListAdapter(RestaurantsActivity.this, restaurants);
+                    mAdapter = new RestaurantListAdapter(RestaurantsListActivity.this, restaurants);
                     mRecyclerView.setAdapter(mAdapter);
                     RecyclerView.LayoutManager layoutManager =
-                            new LinearLayoutManager(RestaurantsActivity.this);
+                            new LinearLayoutManager(RestaurantsListActivity.this);
                     mRecyclerView.setLayoutManager(layoutManager);
                     mRecyclerView.setHasFixedSize(true);
 
@@ -97,7 +97,7 @@ public class RestaurantsActivity extends AppCompatActivity {
     }
 }
 
-//                Toast.makeText(RestaurantsActivity.this, "hello", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(RestaurantsListActivity.this, "hello", Toast.LENGTH_SHORT).show();
 
 
 //    private String[] restaurants = new String[] {"Mi Mero Mole", "Mother's Bistro",
@@ -121,7 +121,7 @@ public class RestaurantsActivity extends AppCompatActivity {
 //@Override
 //public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
 //        String restaurant = ((TextView)view).getText().toString();
-//        Toast.makeText(RestaurantsActivity.this, restaurant, Toast.LENGTH_LONG).show();
+//        Toast.makeText(RestaurantsListActivity.this, restaurant, Toast.LENGTH_LONG).show();
 //
 //        }
 //        });
