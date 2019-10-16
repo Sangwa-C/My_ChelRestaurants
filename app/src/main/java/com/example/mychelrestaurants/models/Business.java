@@ -1,5 +1,5 @@
 
-package com.example.mychelrestaurants;
+package com.example.mychelrestaurants.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

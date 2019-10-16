@@ -1,10 +1,10 @@
 
-package com.example.mychelrestaurants;
+package com.example.mychelrestaurants.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Coordinates {
+public class Center {
 
     @SerializedName("latitude")
     @Expose
@@ -17,7 +17,7 @@ public class Coordinates {
      * No args constructor for use in serialization
      * 
      */
-    public Coordinates() {
+    public Center() {
     }
 
     /**
@@ -25,7 +25,7 @@ public class Coordinates {
      * @param longitude
      * @param latitude
      */
-    public Coordinates(Double latitude, Double longitude) {
+    public Center(Double latitude, Double longitude) {
         super();
         this.latitude = latitude;
         this.longitude = longitude;

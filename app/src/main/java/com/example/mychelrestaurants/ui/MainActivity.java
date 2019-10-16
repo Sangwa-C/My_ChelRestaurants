@@ -1,4 +1,4 @@
-package com.example.mychelrestaurants;
+package com.example.mychelrestaurants.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.mychelrestaurants.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

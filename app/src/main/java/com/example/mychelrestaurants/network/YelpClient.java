@@ -1,4 +1,4 @@
-package com.example.mychelrestaurants;
+package com.example.mychelrestaurants.network;
 
 import java.io.IOException;
 

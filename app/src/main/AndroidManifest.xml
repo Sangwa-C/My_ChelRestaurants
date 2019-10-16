@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity">
+            android:name=".ui.MainActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
@@ -22,10 +22,10 @@
         </activity>
 
         <activity
-            android:name=".RestaurantsActivity">
+            android:name=".ui.RestaurantsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.mychelrestaurants.MainActivity">
+                android:value="com.example.mychelrestaurants.ui.MainActivity">
             </meta-data>
         </activity>
 
