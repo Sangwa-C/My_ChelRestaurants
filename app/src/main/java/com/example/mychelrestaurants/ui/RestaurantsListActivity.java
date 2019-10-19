@@ -47,7 +47,7 @@ public class RestaurantsListActivity extends AppCompatActivity {
 
         YelpApi client = YelpClient.getClient();
 
-        Call<YelpBusinessesSearchResponse> call = client.getRestaurants(location, "restaurants");
+        Call<YelpBusinessesSearchResponse> call = client.getRestaurants(location, "cakes");
 
         call.enqueue(new Callback<YelpBusinessesSearchResponse>() {
             @Override
