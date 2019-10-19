@@ -13,7 +13,6 @@ public class MyRestaurantsArrayAdapter extends ArrayAdapter {
         this.mContext = mContext;
         this.mRestaurants = mRestaurants;
         this.mCuisines = mCuisines;
-
     }
 
     @Override
@@ -25,6 +24,6 @@ public class MyRestaurantsArrayAdapter extends ArrayAdapter {
 
     @Override
     public int getCount() {
-        return mRestaurants.length;
+                return mRestaurants.length;
     }
 }

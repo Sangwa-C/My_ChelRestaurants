@@ -30,10 +30,11 @@
         android:visibility="gone" />
 
     <TextView
-        android:id="@+id/errorTextView"
+        android:id="@+id/errortextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="16dp"
         android:visibility="gone" />
+
 </RelativeLayout>

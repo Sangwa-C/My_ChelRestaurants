@@ -26,9 +26,8 @@ public class RestaurantsActivity extends AppCompatActivity {
 
     @BindView(R.id.locationTextView) TextView mLocationTextView;
     @BindView(R.id.listView) ListView mListView;
-    @BindView(R.id.errorTextView) TextView mErrorTextView;
+    @BindView(R.id.errortextView) TextView mErrorTextView;
     @BindView(R.id.progressBar) ProgressBar mProgressBar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

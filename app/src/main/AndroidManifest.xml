@@ -13,9 +13,16 @@
         android:theme="@style/AppTheme">
 
         <activity
+<<<<<<< Updated upstream
             android:name=".MainActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
+=======
+            android:name=".MainActivity"
+            android:theme="@style/NoActionBarTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+>>>>>>> Stashed changes
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
