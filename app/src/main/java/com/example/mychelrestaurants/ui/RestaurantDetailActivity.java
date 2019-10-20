@@ -9,7 +9,6 @@ import com.example.mychelrestaurants.R;
 import com.example.mychelrestaurants.adapters.RestaurantPagerAdapter;
 import com.example.mychelrestaurants.models.Business;
 
-import org.parceler.Parcels;
 
 import java.util.List;
 
