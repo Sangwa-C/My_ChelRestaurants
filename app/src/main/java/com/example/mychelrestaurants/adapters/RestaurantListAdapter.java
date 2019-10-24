@@ -11,22 +11,23 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mychelrestaurants.R;
-import com.example.mychelrestaurants.models.Business;
+import com.example.mychelrestaurants.models.Restaurant;
 import com.example.mychelrestaurants.ui.RestaurantDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAdapter.RestaurantViewHolder> {
-    private List<Business> mRestaurants;
+    private List<Restaurant> mRestaurants;
     private Context mContext;
 
-    public RestaurantListAdapter(Context context, List<Business> restaurants) {
+    public RestaurantListAdapter(Context context, ArrayList<Restaurant> restaurants) {
         mContext = context;
         mRestaurants = restaurants;
     }
@@ -72,10 +73,10 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
             mContext.startActivity(intent);
         }
 
-        public void bindRestaurant(Business restaurant) {
+        public void bindRestaurant(Restaurant restaurant) {
             Picasso.get().load(restaurant.getImageUrl()).into(mRestaurantImageView);
             mNameTextView.setText(restaurant.getName());
-            mCategoryTextView.setText(restaurant.getCategories().get(0).getTitle());
+            mCategoryTextView.setText(restaurant.getCategories().get(0));
             mRatingTextView.setText("Rating: " + restaurant.getRating() + "/5");
         }
     }
