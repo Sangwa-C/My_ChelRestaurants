@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "790916149128",
+    "firebase_url": "https://my-chelrestaurant.firebaseio.com",
+    "project_id": "my-chelrestaurant",
+    "storage_bucket": "my-chelrestaurant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790916149128:android:8ae489aa4c2248dc79943d",
+        "android_client_info": {
+          "package_name": "com.example.mychelrestaurants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790916149128-i5grbfq71e65f6iune8njslstkg955ba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mychelrestaurants",
+            "certificate_hash": "71b1d63ae64e5c0a0b945835272b231f4f538952"
+          }
+        },
+        {
+          "client_id": "790916149128-354q4pjer4q9469j5tonfr6r6lkae3eu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNtVqs6aMYOztiCwrNxJ1N_vmRHLUnGQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790916149128-354q4pjer4q9469j5tonfr6r6lkae3eu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -95,6 +95,10 @@ public class RestaurantsListActivity extends AppCompatActivity {
     private void hideProgressBar() {
         mProgressBar.setVisibility(View.GONE);
     }
+
+//    public void saveLocationToFirebase(String location) {
+//        mSearchedLocationReference.push().setValue(location);
+//    }
 }
 
 //                Toast.makeText(RestaurantsListActivity.this, "hello", Toast.LENGTH_SHORT).show();

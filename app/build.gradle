@@ -30,6 +30,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -44,10 +63,10 @@ dependencies {
     implementation 'org.parceler:parceler-api:1.1.12'
     implementation 'com.google.firebase:firebase-messaging:17.3.4'
     implementation 'com.google.firebase:firebase-auth:16.0.5'
-    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-database:16.0.6'
     annotationProcessor 'org.parceler:parceler:1.1.12'
-
     testImplementation 'junit:junit:4.12'
+
     //Robolectric dependencies
     testImplementation "org.robolectric:robolectric:3.8"
 
@@ -65,3 +84,4 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.7'
 }
 apply plugin: 'com.google.gms.google-services'
+
