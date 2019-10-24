@@ -64,6 +64,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:17.3.4'
     implementation 'com.google.firebase:firebase-auth:16.0.5'
     implementation 'com.google.firebase:firebase-database:16.0.6'
+    implementation 'com.firebaseui:firebase-ui-database:3.3.1'
     annotationProcessor 'org.parceler:parceler:1.1.12'
     testImplementation 'junit:junit:4.12'
 

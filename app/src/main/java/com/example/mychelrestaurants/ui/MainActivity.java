@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @BindView(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
     @BindView(R.id.locationEditText) EditText mLocationEditText;
+    @BindView(R.id.savedRestaurantsButton) Button mSavedRestaurantsButton;
+
 //    @BindView(R.id.restaurantNameTextView) TextView mAppNameTextView;
 
     @Override
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .getReference()
                 .child(Constants.FIREBASE_CHILD_SEARCHED_LOCATION);//pinpoint location node
         mSearchedLocationReferenceListener = mSearchedLocationReference.addValueEventListener(new ValueEventListener() {
+
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {//something changed!
@@ -67,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mEditor = mSharedPreferences.edit();
 
         mFindRestaurantsButton.setOnClickListener(this);
+        mSavedRestaurantsButton.setOnClickListener(this);
     }
 
     @Override
@@ -84,6 +88,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("location", location);
             startActivity(intent);
         }
+            if (v == mSavedRestaurantsButton) {
+                Intent intent = new Intent(MainActivity.this, SavedRestaurantListActivity.class);
+                startActivity(intent);
+            }
+
     }
 
     public void saveLocationToFirebase(String location) {
