@@ -1,15 +1,23 @@
 package com.example.mychelrestaurants.ui;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mychelrestaurants.Constants;
 import com.example.mychelrestaurants.R;
 import com.example.mychelrestaurants.adapters.RestaurantListAdapter;
 import com.example.mychelrestaurants.models.Business;
@@ -27,6 +35,9 @@ import retrofit2.Response;
 
 public class RestaurantsListActivity extends AppCompatActivity {
     private static final String TAG = RestaurantsListActivity.class.getSimpleName();
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor mEditor;
+    private String mRecentAddress;
 
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     @BindView(R.id.errorTextView) TextView mErrorTextView;
@@ -96,12 +107,42 @@ public class RestaurantsListActivity extends AppCompatActivity {
         mProgressBar.setVisibility(View.GONE);
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_search, menu);
+        ButterKnife.bind(this);
+
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mEditor = mSharedPreferences.edit();
+
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void addToSharedPreferences(String location) {
+        mEditor.putString(Constants.PREFERENCES_LOCATION_KEY, location).apply();
+    }
+
 //    public void saveLocationToFirebase(String location) {
 //        mSearchedLocationReference.push().setValue(location);
 //    }
+
 }
 
-//                Toast.makeText(RestaurantsListActivity.this, "hello", Toast.LENGTH_SHORT).show();
+
+
+
+//  Toast.makeText(RestaurantsListActivity.this, "hello", Toast.LENGTH_SHORT).show();
 
 
 //    private String[] restaurants = new String[] {"Mi Mero Mole", "Mother's Bistro",

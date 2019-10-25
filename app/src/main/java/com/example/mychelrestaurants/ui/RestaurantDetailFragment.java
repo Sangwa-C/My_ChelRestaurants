@@ -102,6 +102,7 @@ public class RestaurantDetailFragment extends Fragment implements View.OnClickLi
                             + "?q=(" + mRestaurant.getName() + ")"));
             startActivity(mapIntent);
         }
+
         if (v == mSaveRestaurantButton) {
             DatabaseReference restaurantRef = FirebaseDatabase
                     .getInstance()

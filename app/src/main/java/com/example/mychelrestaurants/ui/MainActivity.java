@@ -88,10 +88,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("location", location);
             startActivity(intent);
         }
-            if (v == mSavedRestaurantsButton) {
-                Intent intent = new Intent(MainActivity.this, SavedRestaurantListActivity.class);
-                startActivity(intent);
-            }
+
+
+        if (v == mSavedRestaurantsButton) {
+            Intent intent = new Intent(MainActivity.this, SavedRestaurantListActivity.class);
+            startActivity(intent);
+        }
 
     }
 
