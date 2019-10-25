@@ -50,12 +50,6 @@ public class RestaurantDetailFragment extends Fragment implements View.OnClickLi
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mRestaurant = Parcels.unwrap(getArguments().getParcelable("restaurant"));
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_restaurant_detail, container, false);
         ButterKnife.bind(this, view);
@@ -64,25 +58,20 @@ public class RestaurantDetailFragment extends Fragment implements View.OnClickLi
                 .load(mRestaurant.getImageUrl())
                 .into(mImageLabel);
 
-//        List<String> categories = new ArrayList<>();
-//
-//        for (Category category: mRestaurant.getCategories()) {
-//            categories.add(category.getTitle());
-//        }
-
         mNameLabel.setText(mRestaurant.getName());
         mCategoriesLabel.setText(android.text.TextUtils.join(", ", mRestaurant.getCategories()));
         mRatingLabel.setText(Double.toString(mRestaurant.getRating()) + "/5");
         mPhoneLabel.setText(mRestaurant.getPhone());
-        mAddressLabel.setText(mRestaurant.getLocation().toString());
+        mAddressLabel.setText(android.text.TextUtils.join(", ", mRestaurant.getCategories()));
+
         mWebsiteLabel.setOnClickListener(this);
         mPhoneLabel.setOnClickListener(this);
         mAddressLabel.setOnClickListener(this);
 
         mSaveRestaurantButton.setOnClickListener(this);
+
         return view;
     }
-
     @Override
     public void onClick(View v) {
         if (v == mWebsiteLabel) {
@@ -109,6 +98,8 @@ public class RestaurantDetailFragment extends Fragment implements View.OnClickLi
             restaurantRef.push().setValue(mRestaurant);
             Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
         }
+
+
 
 
     }

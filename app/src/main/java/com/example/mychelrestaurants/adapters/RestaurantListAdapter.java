@@ -11,13 +11,13 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mychelrestaurants.R;
+import com.example.mychelrestaurants.models.Business;
 import com.example.mychelrestaurants.models.Restaurant;
 import com.example.mychelrestaurants.ui.RestaurantDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -27,9 +27,9 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
     private List<Restaurant> mRestaurants;
     private Context mContext;
 
-    public RestaurantListAdapter(Context context, ArrayList<Restaurant> restaurants) {
+    public RestaurantListAdapter(Context context, List<Business> restaurants) {
         mContext = context;
-        mRestaurants = restaurants;
+//        mRestaurants = restaurants;
     }
 
     @Override

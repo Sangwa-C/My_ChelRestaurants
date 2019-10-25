@@ -1,11 +1,9 @@
 package com.example.mychelrestaurants.models;
 
-import org.parceler.Parcel;
-
 import java.util.ArrayList;
 import java.util.List;
 
-@Parcel
+
 public class Restaurant {
     String name;
     String phone;
